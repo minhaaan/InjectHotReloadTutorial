@@ -13,6 +13,8 @@
 		E9E803F6282A8E3A007C96B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E803F4282A8E3A007C96B0 /* Main.storyboard */; };
 		E9E803F8282A8E3B007C96B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9E803F7282A8E3B007C96B0 /* Assets.xcassets */; };
 		E9E803FB282A8E3B007C96B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E803F9282A8E3B007C96B0 /* LaunchScreen.storyboard */; };
+		E9E80404282A918D007C96B0 /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = E9E80403282A918D007C96B0 /* Inject */; };
+		E9E80407282A9199007C96B0 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E9E80406282A9199007C96B0 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9E80404282A918D007C96B0 /* Inject in Frameworks */,
+				E9E80407282A9199007C96B0 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +87,10 @@
 			dependencies = (
 			);
 			name = InjectHotReloadTutorial;
+			packageProductDependencies = (
+				E9E80403282A918D007C96B0 /* Inject */,
+				E9E80406282A9199007C96B0 /* SnapKit */,
+			);
 			productName = InjectHotReloadTutorial;
 			productReference = E9E803EB282A8E3A007C96B0 /* InjectHotReloadTutorial.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,10 @@
 				Base,
 			);
 			mainGroup = E9E803E2282A8E3A007C96B0;
+			packageReferences = (
+				E9E80402282A918D007C96B0 /* XCRemoteSwiftPackageReference "Inject" */,
+				E9E80405282A9199007C96B0 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = E9E803EC282A8E3A007C96B0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -358,6 +370,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E9E80402282A918D007C96B0 /* XCRemoteSwiftPackageReference "Inject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzysztofzablocki/Inject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		E9E80405282A9199007C96B0 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E9E80403282A918D007C96B0 /* Inject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9E80402282A918D007C96B0 /* XCRemoteSwiftPackageReference "Inject" */;
+			productName = Inject;
+		};
+		E9E80406282A9199007C96B0 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9E80405282A9199007C96B0 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E9E803E3282A8E3A007C96B0 /* Project object */;
 }
