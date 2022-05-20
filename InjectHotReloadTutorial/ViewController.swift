@@ -12,9 +12,16 @@ class ViewController: UIViewController {
     
     let label: UILabel = {
         let label = UILabel()
-        label.text = "1232"
+        label.text = "123211"
         label.font = .boldSystemFont(ofSize: 20)
         return label
+    }()
+    
+    lazy var bt: UIButton = {
+        let bt = UIButton()
+        bt.setTitle("secondVC", for: .normal)
+        bt.addTarget(self, action: #selector(tap), for: .touchUpInside)
+        return bt
     }()
 
     override func viewDidLoad() {
@@ -28,8 +35,20 @@ class ViewController: UIViewController {
         }
         
         view.backgroundColor = .systemBlue
+        
+        view.addSubview(bt)
+        bt.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview()
+            make.bottom.equalTo(-50)
+            make.centerX.equalToSuperview()
+        }
     }
 
+    @objc func tap() {
+        let secondVC = SecondViewController()
+        secondVC.modalPresentationStyle = .fullScreen
+        self.present(secondVC, animated: true)
+    }
 
 }
 
